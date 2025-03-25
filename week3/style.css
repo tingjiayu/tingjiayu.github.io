@@ -3,9 +3,9 @@ rational for the color scheme and typography:
 
 1. i decided to use big shoulder stencil
 because it has nice modern geometric stencil look which is fitting to my design theme 
-2. I choose this color p because
+2. I choose this color pallette because
 
-============================
+============================ */
 
 
 
@@ -15,7 +15,7 @@ because it has nice modern geometric stencil look which is fitting to my design 
 
 * {
     /* color: hotpink */
-
+}
 
 .purple-color {
     color: rgb(218, 162, 218);
