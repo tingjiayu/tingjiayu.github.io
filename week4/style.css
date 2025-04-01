@@ -33,3 +33,8 @@ span {
   color: blueviolet;
   display: none;
 }
+ ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+ }
