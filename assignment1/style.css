@@ -13,6 +13,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  color: #333;
 }
 
 /* In the beginning the text amongst the website wireframes was skewed to the left, so I added this section to adjust the text. */
