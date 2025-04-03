@@ -1,0 +1,63 @@
+/* ========================================
+rational for the color scheme and typography:
+1. i decided to use Winky Sans
+Because I started out wanting to design a dreamy but clean site, I chose a more fairytale feel font to echo the overall style I wanted to convey.
+2. Meanwhile, to complete the dreamy theme of the site, I chose to complete my site with light pink as the main color and pink and white to make her aesthetically pleasing without being too cumbersome.
+=========================================== */
+
+/* Setting the overall background font */
+body {
+  background-color: #fffaf7;
+  font-size: 1.2rem;
+  font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* In the beginning the text amongst the website wireframes was skewed to the left, so I added this section to adjust the text. */
+.container {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header color and font size */
+h1 {
+  color: #d46e88;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Author name color and font size */
+h2 {
+  color: #d88398;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Overall paragraph formatting and color */
+h3 {
+  color: #ec91a1;
+  font-size: 1.2rem;
+  margin: 2rem 0 1rem 0;
+  padding-left: 0;
+}
+
+/* Wireframe size and color */
+section {
+  background-color: white;
+  border: 1px dashed #eba5b2;
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-left: 0.5;
+}
+ul li {
+  margin-bottom: 0.8rem;
+}
