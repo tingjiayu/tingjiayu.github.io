@@ -1,0 +1,177 @@
+/* For the overall color selection, I chose light pinkish purple as the base tone, which echoes the content in the video.
+  For the button selection, I used all the ICONS in icon8 and did not use any external ICONS. 
+  For the color of the button, I chose a darker pinkish purple compared to the background to emphasize it. 
+  For the volume adjustment keys, I chose the pinkish-purple gradient color, which looks more beautiful.
+  At the same time, regarding the color scheme after the mode transformation, my idea is that it is more suitable for viewing at night. 
+  So the overall color tone is mainly black to highlight the content of the video. 
+  Also, the buttons have been changed to white, making the visual effect clearer. */
+
+body {
+  display: flex;
+  margin: 0 aut0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: "REM", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #333;
+  background-color: #fff6fb;
+  transition: background-color 0.4s, color 0.4s;
+}
+a {
+  color: #c03f93;
+}
+/* header and description */
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #c03f93;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+header .description {
+  font-size: 1rem;
+  color: #a05c8b;
+  max-width: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+main.double-border {
+  border: 4px double #c471a6;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  background: #ffffff;
+  box-shadow: 0 10px 40px rgba(200, 100, 150, 0.15);
+}
+.main-screen video {
+  width: 800px;
+  /*width: 100%;*/
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+}
+
+/* controls layout */
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+/* progress bar */
+#progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: gray;
+  border-radius: 5px;
+  margin: 16px 0 24px;
+}
+#progress-bar {
+  width: 0%;
+  display: block;
+  background-color: coral;
+  height: 100%;
+  transition: width 0.2s ease;
+}
+/* buttons */
+button {
+  cursor: pointer;
+  background-color: #c03f93;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #a82e70;
+}
+
+/* night mode */
+body.night {
+  background-color: #1a1a1a;
+  color: #f3f3f3;
+}
+body.night .double-border {
+  background-color: #2b2b2b;
+  border-color: #bb86fc;
+}
+body.night .main-screen video {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+body.night button {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+body.night button img {
+  filter: invert(1);
+}
+
+body.night button#theme-toggle-button {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+/* save function */
+#save-popup {
+  position: absolute;
+  top: 1rem;
+  background: #f9c5d1;
+  color: #a82e70;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+/* save popup */
+#save-popup.show {
+  opacity: 1;
+  transform: translateY(10px);
+}
+
+body {
+  transition: all 0.4s ease;
+}
+
+.main-screen {
+  position: relative;
+  z-index: 0;
+}
+/* the volume slider */
+/* Using a pinkish-purple gradient color makes this volume adjustment function appear more harmonious and beautiful on the overall page */
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.volume-icon {
+  height: 24px;
+  width: 24px;
+}
+
+#volume-slider {
+  width: 150px;
+  height: 6px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #c03f93, #f5a1c5);
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+}
