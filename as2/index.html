@@ -1,0 +1,84 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My music video player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- This media player is designed with simplicity, softness, and user focus in mind. 
+  The layout is kept minimal to reduce distractions and provide a calming experience for watching or listening to media. 
+  The pastel pink and purple tones create a dreamy, gentle aesthetic that supports the emotional tone of the video content. -->
+    <header>
+      <h1>My music video player</h1>
+      <!-- short description of the player atmosphere and visual intent -->
+      <p class="description" id="description">
+        a clam mirror of pink tones and soft rhythms. let this short video bring
+        you into a peaceful visual soundscape.
+      </p>
+    </header>
+
+    <main class="double-border">
+      <div class="main-screen">
+        <video
+          src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
+          id="my-video"
+        ></video>
+        <!-- here is the progress bar container -->
+        <div id="progress-bar-container">
+          <span id="progress-bar"></span>
+        </div>
+      </div>
+      <div class="controls">
+        <!-- here is the play and pause button -->
+        <button id="play-pause-button" class="double-border">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/play--v2.png"
+            alt=""
+            id="play-pause-img"
+          />
+        </button>
+
+        <!-- here is the fast forward button -->
+        <button id="fast-forward-button" class="double-border">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/fast-forward.png"
+            alt=""
+          />
+        </button>
+
+        <!-- A save button that triggers a floating message to confirm user interaction and simulate feedback behavior. -->
+        <button id="save-button" class="double-border">⭐ Save</button>
+        <div id="save-popup" class="popup-message"></div>
+        <!-- here is to switch the mode can both fit for day and night -->
+        <button id="theme-toggle-button" class="double-border">
+          Switch to night mode
+        </button>
+        <!-- A volume slider that allows fine control of the sound.-->
+        <div class="volume-control">
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/high-volume--v2.png"
+            alt="Volume Icon"
+            class="volume-icon"
+          />
+          <input
+            type="range"
+            id="volume-slider"
+            min="0"
+            max="1"
+            step="0.01"
+            value="1"
+          />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
