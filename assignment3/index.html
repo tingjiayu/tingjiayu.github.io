@@ -1,0 +1,63 @@
+<!-- My idea for the overall website design is to look like a diary, with a total of five pages to browse. 
+The above are the corresponding locations, and below is a short text explanation. 
+The idea is to let users explore visual memories, like flipping through a scrapbook or photo journal.
+Clickable buttons have been added to the left and right sides of the background to highlight the click selection function. 
+I also plan to add the background music function. Users can choose to play music or mute it.
+For part of the code writing, I sought the help of chatgpt
+All the videos inside were shot by myself. The audio is from freesound and the ICONS are from icon8.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- In the diary, I chose to display the video vertically to match the size of the original video -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Diary Flipbook</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- for the Background Music playing
+     The initial music is in silent mode. 
+     Once the user clicks on it, it can start playing 
+     and they can choose to start or pause at any time. -->
+    <audio id="bgm" src="audio.mp3" autoplay loop muted></audio>
+
+    <!--   Navigation arrow on the left. Clicking this will flip to the previous page. 
+    It is absolutely positioned and styled to feel like flipping a book. -->
+    <button class="nav-button left" onclick="prevPage()">◀</button>
+
+    <!-- The core content container that visually represents the "book". 
+    Each 'page' is shown one at a time. -->
+    <div class="book" id="book">
+      <div class="page">
+        <!-- Page title — displayed only on the first page. Hidden dynamically after flipping. -->
+        <h1 class="diary-title" id="diaryTitle">Memories</h1>
+        <!-- Location of the memory. This will update based on each video page. -->
+        <h2 id="location">Queenstown,New Zealand</h2>
+        <!-- Main video element. The videos are short vertical clips representing visual moments. -->
+        <video id="video" src="videos/page1.mp4" autoplay muted loop></video>
+        <!-- some description of the moment -->
+        <p id="caption">
+          The most beautiful lake view was seen on the way! So lucky!
+        </p>
+        <audio id="music" src="audio.mp3" autoplay loop></audio>
+        <!-- Users can choose to turn music on or off at any time  -->
+        <button
+          id="mute-unmute-button"
+          class="bgm-toggle"
+          onclick="toggleBGM()"
+        >
+          <img
+            id="mute-unmute-img"
+            src="https://img.icons8.com/ios-glyphs/30/high-volume--v2.png"
+            alt="toggle sound"
+          />
+        </button>
+      </div>
+    </div>
+    <!-- Navigation arrow on the right. Clicking this will flip to the next page.  -->
+    <button class="nav-button right" onclick="nextPage()">▶</button>
+    <script src="script.js"></script>
+  </body>
+</html>
