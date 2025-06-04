@@ -93,6 +93,27 @@ function prevPage() {
     }, 300);
   }
 }
+
+//This was my initial way of writing "mute"/" unmute ", but I found that it didn't work on the website, so I turned to ChatGPT for help.
+
+//const muteUnmuteButton = document.querySelector("#mute-unmute-button");
+//console.log(muteUnmuteButton);
+
+//muteUnmuteButton.addEventListener("click", toggleAudio);
+
+// const muteUnmuteImg = document.querySelector("#mute-unmute-img");
+// console.log(muteUnmuteImg);
+
+// function toggleAudio() {
+//   if (myVideo.muted) {
+//     myVideo.muted = false;
+//     muteUnmuteImg.src =
+//       "https://img.icons8.com/ios-glyphs/30/high-volume--v2.png";
+//   } else {
+//     myVideo.muted = true;
+//     muteUnmuteImg.src = "https://img.icons8.com/ios-glyphs/30/no-audio--v1.png";
+//   }
+
 //Set the global background music to mute/unmute.
 //It adopts a very simple and clear way of clicking to mute. Users can play or mute at any time.
 function toggleBGM() {
